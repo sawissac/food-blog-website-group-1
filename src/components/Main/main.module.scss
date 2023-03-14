@@ -1,0 +1,12 @@
+.circle-container{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    &__inner-circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        background-color: red;
+    }
+}
