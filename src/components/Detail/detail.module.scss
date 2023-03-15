@@ -1,0 +1,61 @@
+.c-detail{
+    max-width:1750px;
+    margin:0 auto;
+
+    &__image{
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        img{
+            width: 100%;
+            height:100%;
+        }
+    }
+    &__recipes-bloc{
+        display: flex;
+        justify-content: center;
+    }
+    &__recipes,&__brunch{
+        background-color: rgb(70, 69, 69);
+        color: aliceblue;
+        font-weight: bold;
+        padding: 5px 10px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    &__recipes{
+        margin-right: 5px;
+    }
+    h1{
+        text-align: center;
+        font-weight: 500;
+        font-size: 45px;
+    }
+    &__text{
+         max-width: 1060px;
+         margin:0px auto;
+    }
+    &__text-postdate{
+          text-align: center;
+          font-weight: 500;
+          font-size: 20px;
+          margin-bottom: 50px;
+          span{
+            color: rgb(71, 154, 231);
+         }
+    }
+    &__text-description{
+        font-size: 18px;
+        opacity: 0.8;
+        margin-bottom: 50px;
+    }
+}
+.Button{
+    text-align: center;
+    margin-bottom: 50px;
+    button{
+        border: none;
+        font-size:15px;
+        background:none;
+    }
+}
