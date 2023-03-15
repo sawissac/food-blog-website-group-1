@@ -1,15 +1,11 @@
 .c-detail{
-    max-width:1750px;
     margin:0 auto;
-
+    max-width:  1300px;
     &__image{
         height: 500px;
-        object-fit: cover;
-        object-position: center;
-        img{
-            width: 100%;
-            height:100%;
-        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     &__recipes-bloc{
         display: flex;
