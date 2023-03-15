@@ -1,89 +1,73 @@
-.l-wrapper{
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.subscribe{
-    max-width:1390px;
+.p-blog {
+  max-width: 1300px;
+  margin: 0 auto;
+  &__subscribe {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom:4px;
-    // background-color: aliceblue;
-    p{
-      padding-right:15px;
+    margin-bottom: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    font-size: 24px;
+    p {
+      padding-right: 15px;
     }
-    &__input{
-        margin-right:5px;
+    form {
+      flex: 1;
+      display: flex;
+      input {
+        flex: 1;
         padding: 10px 0;
         padding-left: 10px;
+        margin: 0 10px;
         outline: none;
-        border:none;
+        border: none;
         border: 1px solid gray;
-        border-radius: 4px;
-
-    }
-    &__button{
-        border-radius: 99px;
-        padding:0 40px;
+      }
+      button {
+        min-width: 100px;
+        padding: 10px 40px;
         background-color: #000;
         color: #fff;
+      }
     }
-
-}
-.card{
-    max-width:1390px;
-    justify-content: center;
-    margin:0 100px;
+  }
+  &__card-list {
+    margin: 30px 0;
     display: flex;
-    gap:1rem;
-    // justify-content: space-between;
-    &__inner{
-        width:calc(100% / 4 - 40px);
-        &--popular{
-            position: relative;
-            &::before{
-                content: 'Popular';
-                position: absolute;
-                top:0;
-                left: 0;
-                width: 100px;
-                background-color: yellow;
-            }
-        }
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__inner {
+    width: calc(1300px / 4 - 30px);
+    margin: 20px 5px;
+  }
+  &__img {
+    img {
+      object-fit: cover;
+      object-position: center;
+      max-width: 100%;
+      max-height: 100%;
     }
-    &__img{
-        img{
-            object-fit: cover;
-            object-position: center;
-            max-width: 100%;
-            max-height: 100%;
-        }
+  }
+  &__icon {
+    i {
+      margin-right: 10px;
     }
-    &__icon{
-        i{
-            margin-right: 10px;
-        }
-        span{
-            margin-right: 10px;
-        }
+    span {
+      margin-right: 10px;
     }
-    &__text{
-
+  }
+  &__text {
+    margin: 10px 0;
+    a{
+        font-weight: bold;
     }
-    
+  }
 }
 
 
-// .circle-container{
-//     width: 300px;
-//     height: 300px;
-//     display: grid;
-//     place-items: center;
-//     &__inner-circle{
-//         width: 200px;
-//         height: 200px;
-//         border-radius: 200px;
-//         background-color: red;
-//     }
-// }
+
+
