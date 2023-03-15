@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './main.module.scss';
-const Main = () => {
+const Main2 = () => {
   return (
     <div className={styles['l-wrapper']}>
       <div className={styles['subscribe']}>
@@ -79,4 +79,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Main2
