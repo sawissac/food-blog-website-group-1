@@ -21,7 +21,11 @@ const Login = () => {
         {/* slideshow button */}
         <ul className={styles["slide-btn"]}>
           <li>
-            <button type="button" title="button" className={styles["active"]}></button>
+            <button
+              type="button"
+              title="button"
+              className={styles["active"]}
+            ></button>
           </li>
           <li>
             <button type="button" title="button"></button>
@@ -41,11 +45,11 @@ const Login = () => {
           <form>
             <div className={styles["input-control"]}>
               <label htmlFor="userName">Users name or Email</label>
-              <input  type="text" id="userName" />
+              <input type="text" id="userName" />
             </div>
             <div className={styles["input-control"]}>
               <label htmlFor="password">Password</label>
-              <input  type="password" id="password" />
+              <input type="password" id="password" />
             </div>
             <div className={styles["btn-SignIn"]}>
               <a href="#">Sign In</a>
