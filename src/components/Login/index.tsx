@@ -3,23 +3,20 @@ import styles from "./login.module.scss";
 
 const Login = () => {
   return (
-    <div className={styles["l-container"]}>
-      <div className={styles["l-container__img"]}>
-        <img
-          src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-          alt="food"
-        />
-        <div className={styles["img-text"]}>
-          <p>
-            Maecenas mattis egestas
-            <span>
-              Erdum et malesuada fames ac ante ipsum primis in foucibus
-              uspendisse porta
-            </span>
-          </p>
+    <div className={styles["p-login-form"]}>
+      <div className={styles["p-login-form__img"]}>
+        <div
+          className={styles["p-login-form__img-con"]}
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60')",
+          }}
+        ></div>
+        <div className={styles["p-login-form__text-box"]}>
+          <h1>Maecenas mattis egestas</h1>
+          <p>Erdum et malesuada fames ac ante ipsum primis in foucibus uspendisse porta</p>
         </div>
-        {/* slideshow button */}
-        <ul className={styles["slide-btn"]}>
+        <ul className={styles["p-login-form__slide-list"]}>
           <li>
             <button
               type="button"
@@ -38,20 +35,20 @@ const Login = () => {
           </li>
         </ul>
       </div>
-      <div className={styles["l-container__text"]}>
-        <div className={styles["l-container__textbox"]}>
+      <div className={styles["p-login-form__form"]}>
+        <div style={{ display: "none" }}>
           <h1>EASYMEALS</h1>
           <p>Welcome to EASYMEALS</p>
           <form>
-            <div className={styles["input-control"]}>
+            <div>
               <label htmlFor="userName">Users name or Email</label>
               <input type="text" id="userName" />
             </div>
-            <div className={styles["input-control"]}>
+            <div>
               <label htmlFor="password">Password</label>
               <input type="password" id="password" />
             </div>
-            <div className={styles["btn-SignIn"]}>
+            <div className={styles["p-login-form__submit"]}>
               <a href="#">Sign In</a>
             </div>
             <p>
@@ -59,10 +56,7 @@ const Login = () => {
             </p>
           </form>
         </div>
-      </div>
-
-      <div className={styles["l-container__text"]} style={{ display: "none" }}>
-        <div className={styles["l-container__textbox"]}>
+        <div>
           <h1>EasyMeals</h1>
           <p>Welcome to EASYMEALS</p>
           <form>
@@ -75,10 +69,10 @@ const Login = () => {
               <input type="password" id="password2" />
             </div>
             <div className={styles["input-control"]}>
-              <label htmlFor="passwordAgain">Password Again</label>
+              <label htmlFor="passwordAgain">Confirm Password</label>
               <input type="password" id="passwordAgain" />
             </div>
-            <div className={styles["btn-SignIn"]}>
+            <div className={styles["p-login-form__submit"]}>
               <a href="#">Sign Up</a>
             </div>
             <p>
