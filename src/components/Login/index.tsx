@@ -21,16 +21,16 @@ const Login = () => {
         {/* slideshow button */}
         <ul className={styles["slide-btn"]}>
           <li>
-            <button className={styles["active"]}></button>
+            <button type="button" title="button" className={styles["active"]}></button>
           </li>
           <li>
-            <button></button>
+            <button type="button" title="button"></button>
           </li>
           <li>
-            <button></button>
+            <button type="button" title="button"></button>
           </li>
           <li>
-            <button></button>
+            <button type="button" title="button"></button>
           </li>
         </ul>
       </div>
@@ -41,11 +41,11 @@ const Login = () => {
           <form>
             <div className={styles["input-control"]}>
               <label htmlFor="userName">Users name or Email</label>
-              <input type="text" id="userName" />
+              <input  type="text" id="userName" />
             </div>
             <div className={styles["input-control"]}>
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
+              <input  type="password" id="password" />
             </div>
             <div className={styles["btn-SignIn"]}>
               <a href="#">Sign In</a>
@@ -63,12 +63,12 @@ const Login = () => {
           <p>Welcome to EASYMEALS</p>
           <form>
             <div className={styles["input-control"]}>
-              <label htmlFor="userName">Users name or Email</label>
-              <input type="text" id="userName" />
+              <label htmlFor="userName2">Users name or Email</label>
+              <input type="text" id="userName2" />
             </div>
             <div className={styles["input-control"]}>
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
+              <label htmlFor="password2">Password</label>
+              <input type="password" id="password2" />
             </div>
             <div className={styles["input-control"]}>
               <label htmlFor="passwordAgain">Password Again</label>
