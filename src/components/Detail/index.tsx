@@ -20,6 +20,6 @@ const Detail = () => {
           <button>Read More</button>
       </div>
     </div>
-
+  )}
 
 export default Detail
