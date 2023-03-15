@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './detail.module.scss';
 
 const Detail = () => {
   return (
-    <div>Detail</div>
+    <div></div>
   )
 }
 
