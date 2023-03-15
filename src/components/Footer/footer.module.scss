@@ -1,10 +1,6 @@
-.l-nav-header {
-  position: fixed;
+.l-nav-footer {
   background-color: #fff;
   z-index: 9999;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 20px 0px;
   &__inner {
     max-width: 1300px;
@@ -34,23 +30,9 @@
           }
         }
       }
-      &:nth-of-type(2) {
-        a {
-          font-size: 16px;
-        }
-        a:nth-of-type(5) {
-          font-size: 14px;
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: black;
-          color: white;
-          border-radius: 99px;
-          margin-left: 15px;
-          i {
-            margin-right: 10px;
-          }
-        }
-      }
+    }
+    address{
+      font-style: normal;
     }
   }
 }

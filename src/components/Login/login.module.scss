@@ -1,113 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Explora&family=Fredoka+One&family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Explora&family=Fredoka+One&family=Lobster&display=swap");
 
-.l-container{
-
+.p-login-form {
   max-width: 1750px;
   margin: 0 auto;
-  height: 100vh;
+  height: 870px;
   display: flex;
-  &__img{
+  position: relative;
+  &__img {
     width: 50%;
     position: relative;
     display: flex;
     justify-content: center;
-    img{
+    
+  }
+  &__img-con{
+      background-position: center;
+      background-size: cover;
       width: 100%;
       height: 100%;
     }
-    .img-text{
-      position: absolute;
-      color: #fff;
-      opacity: 0.9;
-      bottom: 10px;
-      p{
-        text-align: center;
-        font-size: 28px;
-      }
-      span{
-        display: block;
-        text-align: center;
-        font-size: 22px;
-      }
+  &__text-box {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    p {
+      font-size: 28px;
     }
-    .slide-btn{
-      bottom: 10px;
-      position: absolute;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      li{
-        list-style: none;
-        margin-right: 5px;
-        button{
-          border: none;
-          width: 10px;
-          height: 12px;
-          border-radius: 50%;
-          opacity: 0.6;
-        }
-        .active{
-          width: 25px;
-          border-radius: 99px;
-          opacity: 1;
-        }
+  }
+  &__slide-list {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-right: 5px;
+      button {
+        border: none;
+        width: 10px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 0.6;
+        cursor: pointer;
+      }
+      .active {
+        width: 25px;
+        border-radius: 99px;
+        opacity: 1;
       }
     }
   }
-  &__textbox{
-    margin: 0 auto;
-    width: 450px;
-  }
-  &__text{
+  &__form {
     background-color: #fff;
     width: 50%;
-    h1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    div {
+      margin: 0 auto;
+      width: 450px;
+    }
+    h1 {
       // font-family: 'Dancing Script', cursive;
       font-weight: 700;
       font-size: 40px;
       text-align: center;
     }
-    p{
-      margin-top: 10vh;
+    p {
+      margin-top: 20px;
+      margin-bottom: 100px;
       color: rgb(169, 169, 169);
       text-align: center;
       font-size: 24px;
       letter-spacing: 1px;
     }
-    form{
-      margin-top: 8vh;
-      .input-control {
+    form {
+      div {
         display: flex;
         flex-direction: column;
-        label{
+        label {
           color: rgb(169, 169, 169);
         }
-        input{
-          border:none;
+        input {
+          border: none;
           outline: none;
           display: block;
           padding: 5px;
           font-size: 20px;
-          border-bottom: 2px solid rgb(169, 169, 169);;
+          border-bottom: 2px solid rgb(169, 169, 169);
           margin-bottom: 15px;
         }
       }
-      .btn-SignIn{
-        margin-top: 8vh;
-        margin-bottom: 10vh;
-        text-align: center;
-        a{
-          text-decoration: none;
-          padding: 10px 40px;
-          border-radius: 99px;
-          background-color: rgb(52, 52, 52);
-          color: #fff;
-
-        }
+      p {
+        font-size: 18px;
       }
-      p{
-          font-size: 18px;
-      }
+    }
+  }
+  &__submit {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 99px;
+      background-color: rgb(52, 52, 52);
+      color: #fff;
     }
   }
 }
