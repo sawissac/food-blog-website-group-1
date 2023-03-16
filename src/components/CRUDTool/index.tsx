@@ -13,7 +13,7 @@ const CRUDTool = () => {
     <section className={styles['tool-container']}>
       <div className={styles['tool-container__inner']}>
         <Title text='General'/>
-        <FormInput name='user-name' placeHolder='General' type='text' />
+        <FormInput name='user-name' placeHolder='User name' type='text' />
         <Button value='Rename' />
         <PostList data={data}/>
         <ContentUpdater />
