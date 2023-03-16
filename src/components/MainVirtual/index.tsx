@@ -11,14 +11,16 @@ const MainVirtual = () => {
               2:30mins
             </span>
             <span>
-            <i className="fa-solid fa-tag"></i>
+              <i className="fa-solid fa-tag"></i>
               Tips & Tricks
             </span>
           </div>
           <h1>green veggies with flavoured butter</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maiores neque illum rem, quibusdam maxime
-            hic. Praesentium cum, modi officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus! Atque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            maiores neque illum rem, quibusdam maxime hic. Praesentium cum, modi
+            officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus!
+            Atque.
             <a href="#">see more</a>
           </p>
           <div className={styles["p-main-virtual__user-chip"]}>
