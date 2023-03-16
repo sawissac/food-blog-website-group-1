@@ -13,6 +13,7 @@ a {
 body {
     scrollbar-width: thin;
     scrollbar-color: #000000 #ffffff;
+    scroll-padding-top: 500px;
 }
 
 /* Chrome, Edge and Safari */
