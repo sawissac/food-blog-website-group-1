@@ -17,8 +17,9 @@ const Main2 = () => {
         <div className={styles["p-blog__inner"]}>
           <div className={styles["p-blog__img"]}>
             <img
-              src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Basic-Homemade-Bread_EXPS_TOHcom20_32480_C01_26_2b-20.jpg"
-              alt="Food Photo"></img>
+              src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/food-photography-blogs-dark.jpg"
+              alt="Food Photo"
+            ></img>
           </div>
           <div className={styles["p-blog__icon"]}>
             <i className="fa-regular fa-clock"></i>
@@ -33,7 +34,7 @@ const Main2 = () => {
         <div className={`${styles["p-blog__inner"]}`}>
           <div className={styles["p-blog__img"]}>
             <img
-              src="https://th.bing.com/th/id/OIP.qdHqnzuqEI4cZ-VPs260XgHaHa?pid=ImgDet&rs=1"
+              src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/food-photography-blogs-dark.jpg"
               alt="Food Photo"
             ></img>
           </div>
@@ -50,7 +51,7 @@ const Main2 = () => {
         <div className={styles["p-blog__inner"]}>
           <div className={styles["p-blog__img"]}>
             <img
-              src="https://th.bing.com/th/id/OIP.PvEb8JGKc1RpcWIhYT9UawHaHa?pid=ImgDet&rs=1"
+              src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/food-photography-blogs-dark.jpg"
               alt="Food Photo"
             ></img>
           </div>
@@ -67,7 +68,7 @@ const Main2 = () => {
         <div className={styles["p-blog__inner"]}>
           <div className={styles["p-blog__img"]}>
             <img
-              src="https://1.bp.blogspot.com/-8JEbSC3yGFk/WH9K8d8k1YI/AAAAAAAABuY/W5GefHmAbxAJG5ebtx0yCOdh919NT8kwQCLcB/s400/IMG_7147.jpg"
+              src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/food-photography-blogs-dark.jpg"
               alt="Food Photo"
             ></img>
           </div>
