@@ -5,7 +5,7 @@ const LoginForm = () => {
   return (
     <div className={styles["p-login-form__form"]}>
       <div>
-        <h1>EasyMeals</h1>
+        <h1>EASYMEALS</h1>
         <p>Welcome to EASYMEALS</p>
         <div>
           <div className={styles["input-control"]}>
