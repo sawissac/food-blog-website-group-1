@@ -11,16 +11,6 @@ const Footer = () => {
               <a href="#" title="home">
                 home
               </a>
-              <a href="#" title="categories">
-                categories
-              </a>
-              <a href="#" title="recipes">
-                recipes
-              </a>
-              
-              <a href="#" title="recipes">
-                recipes
-              </a>
               <a href="#" title="contact">
                 contact
               </a>
