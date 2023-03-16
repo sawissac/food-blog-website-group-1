@@ -11,16 +11,6 @@ const Navbar = () => {
               <a href="#" title="home" className={styles['link--active']}>
                 home
               </a>
-              <a href="#" title="categories">
-                categories
-              </a>
-              <a href="#" title="recipes">
-                recipes
-              </a>
-              
-              <a href="#" title="recipes">
-                recipes
-              </a>
               <a href="#" title="contact">
                 contact
               </a>

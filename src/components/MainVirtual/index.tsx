@@ -1,6 +1,6 @@
 import styles from "./mainvirtual.module.scss";
 
-const Main = () => {
+const MainVirtual = () => {
   return (
     <section className={styles["p-main-virtual"]}>
       <div className={styles["p-main-virtual__inner"]}>
@@ -19,6 +19,7 @@ const Main = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maiores neque illum rem, quibusdam maxime
             hic. Praesentium cum, modi officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus! Atque.
+            <a href="#">see more</a>
           </p>
           <div className={styles["p-main-virtual__user-chip"]}>
             <img
@@ -28,7 +29,7 @@ const Main = () => {
               alt=""
             />
             <div>
-              <h4>Marry Brown</h4>
+              <h4>Tode Gyi</h4>
               <p>May 19, 2023</p>
             </div>
           </div>
@@ -38,4 +39,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainVirtual;

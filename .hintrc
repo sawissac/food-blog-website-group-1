@@ -7,9 +7,11 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "position: sticky"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }

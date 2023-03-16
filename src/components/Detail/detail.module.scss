@@ -3,9 +3,27 @@
   max-width: 1300px;
   &__image {
     height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    div {
+      &:nth-child(1) {
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(40px);
+        -webkit-filter: blur(40px);
+      }
+      &:nth-child(2) {
+        z-index: 99;
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
   }
   &__recipes-bloc {
     display: flex;
