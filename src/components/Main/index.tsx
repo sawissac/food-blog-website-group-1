@@ -2,10 +2,10 @@ import styles from "./mainvirtual.module.scss";
 
 const Main = () => {
   return (
-    <section className={styles["main-virtual"]}>
-      <div className={styles["main-virtual__inner"]}>
-        <div className={styles["main-virtual__content"]}>
-          <div className={styles["main-virtual__info"]}>
+    <section className={styles["p-main-virtual"]}>
+      <div className={styles["p-main-virtual__inner"]}>
+        <div className={styles["p-main-virtual__content"]}>
+          <div className={styles["p-main-virtual__info"]}>
             <span>
               <i className="fa-brands fa-readme"></i>
               2:30mins
@@ -20,7 +20,7 @@ const Main = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maiores neque illum rem, quibusdam maxime
             hic. Praesentium cum, modi officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus! Atque.
           </p>
-          <div className={styles["main-virtual__user-chip"]}>
+          <div className={styles["p-main-virtual__user-chip"]}>
             <img
               width="50px"
               height="50px"
