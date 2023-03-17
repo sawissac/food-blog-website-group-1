@@ -5,7 +5,7 @@ import CardSubscribe from "./CardSubscribe";
 import { mockData } from "../../mock-data";
 
 const BlogCard = () => {
-  const cardListData = mockData.mockData;
+  const cardListData = mockData.blogData;
   
   return (
     <section className={styles["p-blog"]}>
