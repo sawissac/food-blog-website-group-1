@@ -1,31 +1,33 @@
-type BlogData = {
+export type BlogData = {
   title: string;
-  mins: number;
+  mins: string;
   desc: string;
   url: string;
   recipe: string;
   id: number;
 };
 
-type UserAdmin = {
+export type UserAdmin = {
   userName: string;
   password: string;
 };
 
-type MockData = {
+export type MockData = {
   admin: UserAdmin;
-  mockData: BlogData[];
+  mainBanner: number;
+  blogData: BlogData[];
 };
 
 export const mockData: MockData = {
+  mainBanner: 0,
   admin: {
     userName: "Tode Gyi",
     password: "Mrbeast6000",
   },
-  mockData: [
+  blogData: [
     {
       title: "SUNDAY BRUNCH : HOLIDAY GINGERBREAD CARDAMOM WAFFLES RECIPE",
-      mins: 5,
+      mins: "5:00",
       id: 1,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -39,7 +41,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 2,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -53,7 +55,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 3,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -67,7 +69,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 4,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -81,7 +83,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 5,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -95,7 +97,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 6,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -109,7 +111,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 7,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -123,7 +125,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 8,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -137,7 +139,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 9,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -151,7 +153,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 10,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -165,7 +167,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 11,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
@@ -179,7 +181,7 @@ export const mockData: MockData = {
     },
     {
       title: "Baked sweet potatoes with cheese inside",
-      mins: 5,
+      mins: "5:00",
       id: 12,
       recipe: "Baked Sweet",
       desc: `Baked sweet potatoes are a popular and healthy side dish that can be enjoyed year-round. This versatile vegetable is high in fiber, vitamins, and minerals, making it an excellent addition to any diet. But have you ever considered adding cheese to your sweet potatoes? The combination of sweet and savory flavors is sure to tantalize your taste buds and leave you wanting more.
