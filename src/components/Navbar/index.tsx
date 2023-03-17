@@ -22,10 +22,22 @@ const Navbar = () => {
           >
             home
           </NavLink>
-          <NavLink to="/contact" title="contact">
+          <NavLink
+            to="/contact"
+            title="contact"
+            className={({ isActive }) => {
+              return isActive ? styles["link--active"] : "";
+            }}
+          >
             contact
           </NavLink>
-          <NavLink to="/about" title="about">
+          <NavLink
+            to="/about"
+            title="about"
+            className={({ isActive }) => {
+              return isActive ? styles["link--active"] : "";
+            }}
+          >
             about
           </NavLink>
         </nav>

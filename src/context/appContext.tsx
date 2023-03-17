@@ -2,9 +2,12 @@ import { ReactElement, createContext, useState } from "react";
 import { BlogData, MockData, mockData } from "./mock-data";
 
 export const AppContext = createContext<MockData>(mockData);
+
+
 type Props = {
   children: ReactElement[] | ReactElement;
 };
+
 const AppContextProvider: React.FC<Props> = ({ children }) => {
   const [mkData, setMockData] = useState(mockData);
 
@@ -37,6 +40,7 @@ const AppContextProvider: React.FC<Props> = ({ children }) => {
   const isBlogExist = (id: number) => {
     return mkData.blogData.filter((i) => i.id === id).length > 0;
   };
+  
   return (
     <AppContext.Provider value={{ ...mkData, createBlogData, setMainBanner, deleteBlogData, setBlogData, isBlogExist }}>
       {children}
@@ -45,3 +49,4 @@ const AppContextProvider: React.FC<Props> = ({ children }) => {
 };
 
 export default AppContextProvider;
+  

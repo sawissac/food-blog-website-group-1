@@ -4,7 +4,6 @@ import FormInput from "./FormInput";
 import Button from "./Button";
 import Textarea from "./FormInputArea";
 import { AppContext } from "../../context/appContext";
-import { useNavigate } from "react-router-dom";
 import { BlogData } from "../../context/mock-data";
 
 type Props = {
@@ -14,7 +13,6 @@ type Props = {
 };
 
 const ContentUpdater: React.FC<Props> = ({ id, back, type }) => {
-  const navigate = useNavigate();
   const { blogData, setBlogData, createBlogData, uniqueId } = useContext(AppContext);
   const [selectedData] = blogData.filter((i) => i.id === id);
   const [data, setData] = useState<BlogData>(
