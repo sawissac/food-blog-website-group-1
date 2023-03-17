@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./detail.module.scss";
-import { mockData } from "../../mock-data";
+import { useParams } from "react-router-dom";
+import { AppContext } from "../../context/appContext";
 
 const Detail = () => {
-  const selectedData = mockData.blogData.filter((i) => i.id === 4);
-  const { desc, recipe, title, url } = selectedData[0];
+  const { id } = useParams();
+  const { blogData } = useContext(AppContext);
+  const [selectedData] = blogData.filter((i) => i.id === Number(id));
+  const { desc, recipe, title, url } = selectedData;
+
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   return (
     <section className={styles["p-detail"]}>
       <div className={styles["p-detail__image"]}>
@@ -18,9 +28,6 @@ const Detail = () => {
       <h1>{title}</h1>
       <div className={styles["p-detail__text"]}>
         <p className={styles["p-detail__text-description"]}>{desc}</p>
-      </div>
-      <div className={styles["p-detail__button"]}>
-        <button>Read More</button>
       </div>
     </section>
   );

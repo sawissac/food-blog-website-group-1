@@ -7,23 +7,27 @@ export type BlogData = {
   id: number;
 };
 
-export type UserAdmin = {
-  userName: string;
-  password: string;
-};
-
 export type MockData = {
-  admin: UserAdmin;
   mainBanner: number;
   blogData: BlogData[];
+  uniqueId: number;
+  setMainBanner: (props: number) => void;
+  setBlogData: (id: number, data: BlogData) => void;
+  deleteBlogData: (id: number) => void;
+  createBlogData: (data: BlogData) => void;
+  isBlogExist: (id: number) => boolean;
 };
 
 export const mockData: MockData = {
-  mainBanner: 0,
-  admin: {
-    userName: "Tode Gyi",
-    password: "Mrbeast6000",
+  mainBanner: 1,
+  uniqueId: 13,
+  setMainBanner: () => {},
+  setBlogData: () => {},
+  deleteBlogData: () => {},
+  isBlogExist: () => {
+    return false;
   },
+  createBlogData: () => {},
   blogData: [
     {
       title: "SUNDAY BRUNCH : HOLIDAY GINGERBREAD CARDAMOM WAFFLES RECIPE",

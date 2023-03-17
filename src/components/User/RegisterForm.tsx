@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react'
 import styles from "./login.module.scss";
+import { Link } from 'react-router-dom';
 
-const LoginForm = () => {
+const RegisterForm = () => {
   return (
     <div className={styles["p-login-form__form"]}>
       <div>
@@ -21,15 +22,15 @@ const LoginForm = () => {
             <input type="password" id="passwordAgain" />
           </div>
           <div className={styles["p-login-form__submit"]}>
-            <a href="#">Sign Up</a>
+            <button  type="button">Sign Up</button>
           </div>
           <p>
-            Already have an account? <a href="#">Sign in</a>
+            Already have an account?  <Link to="/user/sign-in">Sign in</Link>
           </p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LoginForm;
+export default RegisterForm

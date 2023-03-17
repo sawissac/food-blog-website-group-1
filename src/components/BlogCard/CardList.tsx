@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./main.module.scss";
 import CardListItem from "./CardListItem";
-import { BlogData } from "../../mock-data";
+import { BlogData } from "../../context/mock-data";
 
 type Props = {
   data: BlogData[];
@@ -17,6 +17,7 @@ const CardList: React.FC<Props> = ({ data }) => {
             mins={i.mins}
             title={i.title}
             src={i.url}
+            id={i.id}
           />
         );
       })}
