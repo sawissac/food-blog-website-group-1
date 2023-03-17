@@ -3,7 +3,7 @@
   font-family: 'Poppins', sans-serif;
   max-width: 1750px;
   margin: 0 auto;
-  height: 870px;
+  height: 100vh;
   display: flex;
   // position: relative;
   &__img {
@@ -105,7 +105,8 @@
   &__submit {
     text-align: center;
     padding: 20px 0;
-    a {
+    button {
+      font-size: 18px;
       display: inline-block;
       text-decoration: none;
       padding: 15px 0px;

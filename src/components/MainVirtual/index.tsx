@@ -1,10 +1,14 @@
-import { mockData } from "../../mock-data";
+import { Link } from "react-router-dom";
+import { mockData } from "../../context/mock-data";
 import styles from "./mainvirtual.module.scss";
+import { useContext } from "react";
+import { AppContext } from "../../context/appContext";
+import { AuthContext } from "../../context/authContext";
 
 const MainVirtual = () => {
-  const { blogData, mainBanner, admin } = mockData;
-  const selectData = blogData[mainBanner];
-
+  const { userData } = useContext(AuthContext);
+  const { mainBanner, blogData } = useContext(AppContext);
+  const [selectData] = blogData.filter((i) => i.id === mainBanner);
   return (
     <section className={styles["p-main-virtual"]}>
       <div className={styles["p-main-virtual__inner"]}>
@@ -25,11 +29,8 @@ const MainVirtual = () => {
               : selectData.title}
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            maiores neque illum rem, quibusdam maxime hic. Praesentium cum, modi
-            officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus!
-            Atque.
-            <a href="#">see more</a>
+            {selectData.desc.length > 200 ? selectData.desc.substring(0, 200) + "..." : selectData.desc}
+            <Link to={`/detail/${selectData.id}`}>see more</Link>
           </p>
           <div className={styles["p-main-virtual__user-chip"]}>
             <img
@@ -39,7 +40,7 @@ const MainVirtual = () => {
               alt=""
             />
             <div>
-              <h4>{admin.userName}</h4>
+              <h4>{userData[0].userName}</h4>
               <p>May 19, 2023</p>
             </div>
           </div>
