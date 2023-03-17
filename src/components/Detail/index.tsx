@@ -3,7 +3,7 @@ import styles from "./detail.module.scss";
 import { mockData } from "../../mock-data";
 
 const Detail = () => {
-  const selectedData = mockData.mockData.filter((i) => i.id === 4);
+  const selectedData = mockData.blogData.filter((i) => i.id === 4);
   const { desc, recipe, title, url } = selectedData[0];
   return (
     <section className={styles["p-detail"]}>
@@ -12,14 +12,14 @@ const Detail = () => {
         <div role="img" title="img" style={{ backgroundImage: `url('${url}')` }} />
       </div>
       <div className={styles["p-detail__recipes-bloc"]}>
-        <div>RECIPES</div>
+        <div>Recipes</div>
         <div> {recipe} </div>
       </div>
       <h1>{title}</h1>
       <div className={styles["p-detail__text"]}>
         <p className={styles["p-detail__text-description"]}>{desc}</p>
       </div>
-      <div className={styles["Button"]}>
+      <div className={styles["p-detail__button"]}>
         <button>Read More</button>
       </div>
     </section>

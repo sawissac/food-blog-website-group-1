@@ -1,6 +1,10 @@
+import { mockData } from "../../mock-data";
 import styles from "./mainvirtual.module.scss";
 
 const MainVirtual = () => {
+  const { blogData, mainBanner, admin } = mockData;
+  const selectData = blogData[mainBanner];
+
   return (
     <section className={styles["p-main-virtual"]}>
       <div className={styles["p-main-virtual__inner"]}>
@@ -8,17 +12,16 @@ const MainVirtual = () => {
           <div className={styles["p-main-virtual__info"]}>
             <span>
               <i className="fa-brands fa-readme"></i>
-              2:30mins
+              {selectData.mins}mins
             </span>
             <span>
-            <i className="fa-solid fa-tag"></i>
+              <i className="fa-solid fa-tag"></i>
               Tips & Tricks
             </span>
           </div>
-          <h1>green veggies with flavoured butter</h1>
+          <h1>{selectData.title.length > 30 ? selectData.title.substring(0, 30) + "..." : selectData.title}</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maiores neque illum rem, quibusdam maxime
-            hic. Praesentium cum, modi officiis ut, obcaecati deleniti quae amet velit ea adipisci ducimus! Atque.
+            {selectData.desc.length > 200 ? selectData.desc.substring(0, 200) + "..." : selectData.desc}
             <a href="#">see more</a>
           </p>
           <div className={styles["p-main-virtual__user-chip"]}>
@@ -29,7 +32,7 @@ const MainVirtual = () => {
               alt=""
             />
             <div>
-              <h4>Tode Gyi</h4>
+              <h4>{admin.userName}</h4>
               <p>May 19, 2023</p>
             </div>
           </div>

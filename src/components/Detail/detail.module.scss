@@ -1,4 +1,5 @@
 .p-detail {
+  font-family: 'Poppins', sans-serif;
   margin: 0 auto;
   max-width: 1300px;
   &__image {
@@ -6,21 +7,22 @@
     position: relative;
     overflow: hidden;
     div {
-      &:nth-child(1) {
+      &:nth-child(1),&:nth-child(2) {
         position: absolute;
-        inset: 0;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+      }
+      &:nth-child(1) {
         filter: blur(40px);
         -webkit-filter: blur(40px);
+        background-size: cover;
       }
-      &:nth-child(2) {
-        z-index: 99;
-        position: absolute;
-        inset: 0;
-        background-position: center;
-        background-repeat: no-repeat;
+      &:nth-child(2){
+        z-index: 10;
         background-size: contain;
       }
     }
@@ -91,27 +93,19 @@
     max-width: 1060px;
     margin: 0px auto;
   }
-  &__text-postdate {
-    text-align: center;
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 50px;
-    span {
-      color: rgb(71, 154, 231);
-    }
-  }
   &__text-description {
     font-size: 18px;
     opacity: 0.8;
     margin-bottom: 50px;
   }
-}
-.Button {
-  text-align: center;
-  margin-bottom: 50px;
-  button {
-    border: none;
-    font-size: 15px;
-    background: none;
+  &__button {
+    text-align: center;
+    margin-bottom: 50px;
+    button {
+      border: none;
+      font-size: 15px;
+      background: none;
+    }
   }
 }
+

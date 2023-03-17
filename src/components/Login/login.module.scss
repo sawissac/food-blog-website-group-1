@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Explora&family=Fredoka+One&family=Lobster&display=swap");
 
 .p-login-form {
+  font-family: 'Poppins', sans-serif;
   max-width: 1750px;
   margin: 0 auto;
   height: 870px;
@@ -19,14 +19,18 @@
   }
   &__text-box {
     position: absolute;
-    bottom: 70px;
     left: 0;
     right: 0;
+    bottom: 70px;
     height: 100px;
     color: #fff;
     text-align: center;
+    h1{
+      font-size: 24px;
+    }
     p {
-      font-size: 28px;
+      font-size: 20px;
+      padding: 0px 20px;
     }
   }
   &__slide-list {
@@ -54,7 +58,7 @@
     }
   }
   &__form {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 50%;
     display: flex;
     justify-content: center;

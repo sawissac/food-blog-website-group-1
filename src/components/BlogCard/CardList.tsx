@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./main.module.scss";
 import CardListItem from "./CardListItem";
+import { BlogData } from "../../mock-data";
 
 type Props = {
-  data: any[];
+  data: BlogData[];
 };
 
 const CardList: React.FC<Props> = ({ data }) => {
@@ -13,8 +14,8 @@ const CardList: React.FC<Props> = ({ data }) => {
         return (
           <CardListItem
             key={index}
-            mins="30:00"
-            title="Baked sweet potatoes with creamy avocado&pumpkin"
+            mins={i.mins}
+            title={i.title}
             src={i.url}
           />
         );
