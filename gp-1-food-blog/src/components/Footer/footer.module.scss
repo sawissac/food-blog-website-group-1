@@ -1,0 +1,39 @@
+.l-nav-footer {
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  padding: 30px 0px;
+  margin-top: 100px;
+  &__inner {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    nav {
+      a {
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin: 0 5px;
+        font-size: 14px;
+      }
+      .link--active {
+        font-weight: bold;
+      }
+      &:nth-of-type(1) {
+        a {
+          margin: 0 15px;
+          &:nth-of-type(1) {
+            font-size: 16px;
+            margin-left: 0px;
+            margin-right: 30px;
+            line-height: 1;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    address{
+      font-style: normal;
+    }
+  }
+}

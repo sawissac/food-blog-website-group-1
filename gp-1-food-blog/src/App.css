@@ -1,0 +1,58 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #ffffff;
+    scroll-padding-top: 500px;
+}
+
+/* Chrome, Edge and Safari */
+body::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-track:hover {
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-track:active {
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #000000;
+}

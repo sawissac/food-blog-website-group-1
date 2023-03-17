@@ -17,8 +17,8 @@
         background-repeat: no-repeat;
       }
       &:nth-child(1) {
-        filter: blur(40px);
         -webkit-filter: blur(40px);
+        filter: blur(40px);
         background-size: cover;
       }
       &:nth-child(2){

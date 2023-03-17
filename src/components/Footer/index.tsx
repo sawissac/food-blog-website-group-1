@@ -1,30 +1,35 @@
-import styles from './footer.module.scss';
+import { NavLink } from "react-router-dom";
+import styles from "./footer.module.scss";
 
 const Footer = () => {
-    return (
-        <footer className={styles["l-nav-footer"]}>
-          <div className={styles["l-nav-footer__inner"]}>
-            <nav>
-              <a href="#" title="easymeals">
-                easymeals
-              </a>
-              <a href="#" title="home">
-                home
-              </a>
-              <a href="#" title="contact">
-                contact
-              </a>
-              <a href="#" title="about">
-                about
-              </a>
-            </nav>
-    
-            <address>
-              &copy;2023 Easymeals, Co
-            </address>
-          </div>
-        </footer>
-      );
-}
+  return (
+    <footer className={styles["l-nav-footer"]}>
+      <div className={styles["l-nav-footer__inner"]}>
+        <nav>
+          <NavLink to="/" title="easymeals">
+            easymeals
+          </NavLink>
+          <NavLink
+            to="/"
+            title="home"
+            className={({ isActive }) => {
+              return isActive ? styles["link--active"] : "";
+            }}
+          >
+            home
+          </NavLink>
+          <NavLink to="/contact" title="contact">
+            contact
+          </NavLink>
+          <NavLink to="/about" title="about">
+            about
+          </NavLink>
+        </nav>
 
-export default Footer
+        <address>&copy;2023 Easymeals, Co</address>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
