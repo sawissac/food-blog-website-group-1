@@ -1,24 +1,54 @@
 import React from "react";
 import styles from "./crudtool.module.scss";
 import Title from "./Title";
-import { BlogData } from "../../mock-data";
+import { BlogData } from "../../context/mock-data";
 
 type Props = {
   mockdata: BlogData[];
+  onEditClick: (ev: number) => void;
+  onDeleteClick: (ev: number) => void;
+  onCreateClick: ()=>void;
 };
-const PostList: React.FC<Props> = ({ mockdata }) => {
+
+const PostList: React.FC<Props> = ({ mockdata, onDeleteClick, onEditClick,onCreateClick }) => {
   return (
     <div className={styles["tool-container__post"]}>
       <Title text="Content" />
+
+      <div>
+        <p>Create Post</p>
+        <button
+          type="button"
+          title="edit"
+          onClick={onCreateClick}
+        >
+          <i className="fa-regular fa-plus"></i>
+        </button>
+      </div>
+
       {mockdata.map((item, index) => {
         return (
           <div key={index}>
-            <p>{item.id} - {item.title.length > 50 ? item.title.substring(0, 50) + "..." : item.title}</p>
+            <p>
+              {item.id} - {item.title.length > 50 ? item.title.substring(0, 50) + "..." : item.title}
+            </p>
             <div>
-              <button type="button" title="edit">
+              <button
+                type="button"
+                title="edit"
+                onClick={() => {
+                  onEditClick(item.id);
+                }}
+              >
                 <i className="fa-regular fa-pen-to-square"></i>
               </button>
-              <button type="button" title="delete">
+              <button
+                type="button"
+                title="delete"
+                onClick={() => {
+                  onDeleteClick(item.id);
+                }}
+              >
                 <i className="fa-solid fa-trash"></i>
               </button>
             </div>

@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./login.module.scss";
 import LoginForm from "./LoginForm";
+import { useParams } from "react-router-dom";
+import RegisterForm from "./RegisterForm";
 
 const Login = () => {
+  const {type} = useParams();
   return (
     <section className={styles["p-login-form"]}>
       <div className={styles["p-login-form__img"]}>
@@ -32,7 +35,13 @@ const Login = () => {
           </li>
         </ul>
       </div>
-      <LoginForm />
+      {
+        type === "sign-up" && <RegisterForm /> 
+      }
+      {
+        type === "sign-in" && <LoginForm />
+      }
+      
     </section>
   );
 };

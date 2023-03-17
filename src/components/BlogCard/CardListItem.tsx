@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./main.module.scss";
+import { Link } from "react-router-dom";
 
 type Props = {
   src: string;
   mins: string;
   title: string;
+  id: number;
 };
 
-const CardListItem: React.FC<Props> = ({ src, mins, title }) => {
+const CardListItem: React.FC<Props> = ({ id, src, mins, title }) => {
+
   return (
     <div className={styles["p-blog__inner"]}>
-      <a href="#" target="_self" title={title}>
+      <Link to={`/detail/${id}`} title={title}>
         <div className={styles["p-blog__img"]}>
           <img src={src} alt={title} />
         </div>
@@ -23,7 +26,7 @@ const CardListItem: React.FC<Props> = ({ src, mins, title }) => {
         <div className={styles["p-blog__text"]}>
           <p>{title.length > 50 ? title.substring(0, 40) + "..." : title}</p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

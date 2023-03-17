@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./main.module.scss";
 import CardList from "./CardList";
 import CardSubscribe from "./CardSubscribe";
-import { mockData } from "../../mock-data";
+import { AppContext } from "../../context/appContext";
 
 const BlogCard = () => {
-  const cardListData = mockData.blogData;
+  const mockData = useContext(AppContext);
   
   return (
     <section className={styles["p-blog"]}>
       <CardSubscribe />
-      <CardList data={cardListData}/>
+      <CardList data={mockData.blogData}/>
     </section>
   );
 };
