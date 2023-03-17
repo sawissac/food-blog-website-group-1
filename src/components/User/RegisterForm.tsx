@@ -31,6 +31,7 @@ const RegisterForm = () => {
     })
     setUserName("");
     setPassword("");
+    setReWritePassword("");
     navigate("/user/sign-in");
   }
 

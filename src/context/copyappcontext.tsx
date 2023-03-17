@@ -11,8 +11,8 @@ type Props = {
 const AppContextProvider: React.FC<Props> = ({ children }) => {
   const [mkData, setMockData] = useState(mockData);
 
-  const setMainBanner = (id: number) => {
-    setMockData((i) => ({ ...i, mainBanner: id }));
+  const setMainBanner = (props: number) => {
+    setMockData((i) => ({ ...i, mainBanner: props }));
   };
 
   const setBlogData = (id: number, data: BlogData) => {
