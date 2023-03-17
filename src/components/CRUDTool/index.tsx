@@ -10,9 +10,9 @@ import { AppContext } from "../../context/appContext";
 import { useNavigate } from "react-router-dom";
 
 const CRUDTool = () => {
-  const { activeUser, userData, renameActiveUser, setLogin, setActiveUser } = useContext(AuthContext);
+  const { activeUserId, userData, renameUserName, setLogin, setActiveUserId } = useContext(AuthContext);
   const { blogData, mainBanner, setMainBanner, deleteBlogData, isBlogExist } = useContext(AppContext);
-  const [selectedUser] = userData.filter((i) => i.id === activeUser);
+  const [selectedUser] = userData.filter((i) => i.id === activeUserId);
   const [userName, setUserName] = useState(selectedUser.userName);
   const [bannerId, setBannerId] = useState(mainBanner.toString());
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const CRUDTool = () => {
           <Button
             value="Rename"
             onClick={() => {
-              renameActiveUser(activeUser, userName);
+              renameUserName(activeUserId, userName);
               alert("User Name Updated");
             }}
           />
@@ -69,7 +69,7 @@ const CRUDTool = () => {
             value="Logout"
             onClick={() => {
               setLogin(false);
-              setActiveUser(0);
+              setActiveUserId(0);
               navigate("/");
             }}
           />
@@ -123,7 +123,7 @@ const CRUDTool = () => {
         <Button
           value="Rename"
           onClick={() => {
-            renameActiveUser(activeUser, userName);
+            renameUserName(activeUserId, userName);
             alert("User Name Updated");
           }}
         />
@@ -132,7 +132,7 @@ const CRUDTool = () => {
           value="Logout"
           onClick={() => {
             setLogin(false);
-            setActiveUser(0);
+            setActiveUserId(0);
             navigate("/");
           }}
         />

@@ -21,7 +21,7 @@ const ContentUpdater: React.FC<Props> = ({ id, back, type }) => {
 
   return (
     <div>
-      <Title text="Updater" />
+      <Title text={type === "update" ? "Updater" : "Create"} />
       <FormInput
         name="user-name"
         placeHolder="Title"

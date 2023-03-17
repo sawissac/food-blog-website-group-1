@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/authContext";
 const LoginForm = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const { userData, setLogin, setActiveUser } = useContext(AuthContext);
+  const { userData, setLogin, setActiveUserId } = useContext(AuthContext);
   const navigate = useNavigate();
 
   function handleSubmit() {
@@ -14,7 +14,7 @@ const LoginForm = () => {
 
     if (userFound.length > 0) {
       setLogin(true);
-      setActiveUser(userFound[0].id);
+      setActiveUserId(userFound[0].id);
       setUserName("");
       setPassword("");
       navigate("/");

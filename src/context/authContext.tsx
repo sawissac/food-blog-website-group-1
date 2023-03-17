@@ -1,25 +1,32 @@
 import { ReactElement, createContext, useState } from "react";
 
-export type UserData = {
+export interface UserData {
   id: number;
   role: string;
   userName: string;
   password: string;
-};
+}
 
-type AuthProps = {
+interface AuthProps {
+  // navar login | profile
   isLogin: boolean;
+  // signin, signup, crud
   userData: UserData[];
-  activeUser: number;
+  // crud
+  activeUserId: number;
+  // crud
+  uniqueId: number;
   setLogin: (props: boolean) => void;
   setUserData: (id: number, data: UserData) => void;
-  setActiveUser: (id: number) => void;
-  renameActiveUser: (id: number, rename: string) => void;
-};
+  setActiveUserId: (id: number) => void;
+  renameUserName: (id: number, rename: string) => void;
+  createUserData: (data: UserData) => void;
+}
 
 const AuthContextData: AuthProps = {
   isLogin: false,
-  activeUser: 0,
+  activeUserId: 0,
+  uniqueId: 3,
   userData: [
     {
       id: 1,
@@ -36,8 +43,9 @@ const AuthContextData: AuthProps = {
   ],
   setLogin: () => {},
   setUserData: () => {},
-  setActiveUser: () => {},
-  renameActiveUser: () => {},
+  setActiveUserId: () => {},
+  renameUserName: () => {},
+  createUserData: () => {},
 };
 
 export const AuthContext = createContext<AuthProps>(AuthContextData);
@@ -48,37 +56,49 @@ type Props = {
 
 const AuthContextProvider: React.FC<Props> = ({ children }) => {
   const [auth, setAuth] = useState(AuthContextData);
-  const setLogin = (props: boolean) => {
-    setAuth((i) => ({ ...i, isLogin: props }));
+  const overide = {
+    ...auth,
+    setLogin: (flag: boolean) => {
+      setAuth((data) => {
+        return {
+          ...data,
+          isLogin: flag,
+        };
+      });
+    },
+    setUserData: (searchId: number, data: UserData) => {
+      const updatedData = auth.userData.map((user) => {
+        if (user.id === searchId) {
+          return { ...user, ...data };
+        } else {
+          return user;
+        }
+      });
+      setAuth((data) => ({
+        ...data,
+        userData: updatedData,
+      }));
+    },
+    setActiveUserId: (id: number) => {
+      setAuth((data) => ({ ...data, activeUserId: id }));
+    },
+    renameUserName: (searchId: number, rename: string) => {
+      const updatedData = auth.userData.map((user) => {
+        if (user.id === searchId) {
+          return { ...user, userName: rename };
+        } else {
+          return user;
+        }
+      });
+      setAuth((data) => ({ ...data, userData: updatedData }));
+    },
+    createUserData: (data: UserData) => {
+      const newUserData = [...auth.userData];
+      newUserData.push(data);
+      setAuth((data) => ({ ...data, userData: newUserData, uniqueId: auth.uniqueId + 1 }));
+    },
   };
-  const setUserData = (id: number, data: UserData) => {
-    const updatedData = auth.userData.map((i) => {
-      if (i.id === id) {
-        return { ...i, ...data };
-      } else {
-        return i;
-      }
-    });
-    setAuth((i) => ({ ...i, userData: updatedData }));
-  };
-  const renameActiveUser = (id: number, rename: string) => {
-    const updatedData = auth.userData.map((i) => {
-      if (i.id === id) {
-        return { ...i, userName: rename };
-      } else {
-        return i;
-      }
-    });
-    setAuth((i) => ({ ...i, userData: updatedData }));
-  };
-  const setActiveUser = (id: number) => {
-    setAuth((i) => ({ ...i, activeUser: id }));
-  };
-  return (
-    <AuthContext.Provider value={{ ...auth, setLogin, setActiveUser, setUserData, renameActiveUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={overide}>{children}</AuthContext.Provider>;
 };
 
 export default AuthContextProvider;
