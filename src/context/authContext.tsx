@@ -11,15 +11,18 @@ type AuthProps = {
   isLogin: boolean;
   userData: UserData[];
   activeUser: number;
+  uniqueId: number;
   setLogin: (props: boolean) => void;
   setUserData: (id: number, data: UserData) => void;
   setActiveUser: (id: number) => void;
   renameActiveUser: (id: number, rename: string) => void;
+  createUserData: (data: UserData) => void;
 };
 
 const AuthContextData: AuthProps = {
   isLogin: false,
   activeUser: 0,
+  uniqueId: 3,
   userData: [
     {
       id: 1,
@@ -38,6 +41,7 @@ const AuthContextData: AuthProps = {
   setUserData: () => {},
   setActiveUser: () => {},
   renameActiveUser: () => {},
+  createUserData: () => {},
 };
 
 export const AuthContext = createContext<AuthProps>(AuthContextData);
@@ -74,8 +78,13 @@ const AuthContextProvider: React.FC<Props> = ({ children }) => {
   const setActiveUser = (id: number) => {
     setAuth((i) => ({ ...i, activeUser: id }));
   };
+  const createUserData = (data: UserData) => {
+    const updatedUserData = [...auth.userData];
+    updatedUserData.push(data)
+    setAuth((i) => ({ ...i, userData: updatedUserData, uniqueId: auth.uniqueId + 1 }));
+  };
   return (
-    <AuthContext.Provider value={{ ...auth, setLogin, setActiveUser, setUserData, renameActiveUser }}>
+    <AuthContext.Provider value={{ ...auth, setLogin, setActiveUser, setUserData, renameActiveUser, createUserData }}>
       {children}
     </AuthContext.Provider>
   );
