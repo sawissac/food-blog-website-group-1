@@ -1,4 +1,4 @@
-import { ReactElement, createContext, useState } from "react";
+import { ReactElement, createContext, useEffect, useState } from "react";
 
 export interface UserData {
   id: number;
@@ -8,13 +8,9 @@ export interface UserData {
 }
 
 interface AuthProps {
-  // navar login | profile
   isLogin: boolean;
-  // signin, signup, crud
   userData: UserData[];
-  // crud
   activeUserId: number;
-  // crud
   uniqueId: number;
   setLogin: (props: boolean) => void;
   setUserData: (id: number, data: UserData) => void;
@@ -48,6 +44,38 @@ const AuthContextData: AuthProps = {
   createUserData: () => {},
 };
 
+interface AuthStatus {
+  isLogin: string;
+  activeUserId: number;
+}
+
+export const getAuthStatusLocalStorage = (): AuthStatus => {
+  const data = localStorage.getItem("authStatus");
+
+  if (data === null) {
+    const defaultData = {
+      isLogin: "no",
+      activeUserId: 0,
+    };
+
+    localStorage.setItem("authStatus", JSON.stringify(defaultData));
+
+    return defaultData;
+  } else {
+    return JSON.parse(data);
+  }
+};
+
+export function setAuthStatusLocalStorage(isLogin: string, activeUserId: number) {
+  localStorage.setItem(
+    "authStatus",
+    JSON.stringify({
+      isLogin: isLogin,
+      activeUserId: activeUserId,
+    })
+  );
+}
+
 export const AuthContext = createContext<AuthProps>(AuthContextData);
 
 type Props = {
@@ -56,7 +84,21 @@ type Props = {
 
 const AuthContextProvider: React.FC<Props> = ({ children }) => {
   const [auth, setAuth] = useState(AuthContextData);
-  const overide = {
+
+  useEffect(() => {
+    const stoAuthData = getAuthStatusLocalStorage();
+    if (stoAuthData.isLogin === "yes") {
+      setAuth((data) => {
+        return {
+          ...data,
+          isLogin: stoAuthData.isLogin === "yes" ? true : false,
+          activeUserId: stoAuthData.activeUserId,
+        };
+      });
+    }
+  }, []);
+
+  const overRide = {
     ...auth,
     setLogin: (flag: boolean) => {
       setAuth((data) => {
@@ -98,7 +140,7 @@ const AuthContextProvider: React.FC<Props> = ({ children }) => {
       setAuth((data) => ({ ...data, userData: newUserData, uniqueId: auth.uniqueId + 1 }));
     },
   };
-  return <AuthContext.Provider value={overide}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={overRide}>{children}</AuthContext.Provider>;
 };
 
 export default AuthContextProvider;

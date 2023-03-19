@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import styles from "./login.module.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext, setAuthStatusLocalStorage } from "../../context/authContext";
 
 const LoginForm = () => {
   const [userName, setUserName] = useState("");
@@ -15,6 +15,7 @@ const LoginForm = () => {
     if (userFound.length > 0) {
       setLogin(true);
       setActiveUserId(userFound[0].id);
+      setAuthStatusLocalStorage("yes",userFound[0].id);
       setUserName("");
       setPassword("");
       navigate("/");

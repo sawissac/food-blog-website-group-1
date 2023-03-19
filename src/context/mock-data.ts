@@ -8,7 +8,7 @@ export type BlogData = {
 };
 
 export type MockData = {
-  mainBanner: number;
+  mainBannerId: number;
   blogData: BlogData[];
   uniqueId: number;
   setMainBanner: (props: number) => void;
@@ -18,8 +18,8 @@ export type MockData = {
   isBlogExist: (id: number) => boolean;
 };
 
-export const mockData: MockData = {
-  mainBanner: 1,
+export const MockData: MockData = {
+  mainBannerId: 1,
   uniqueId: 13,
   setMainBanner: () => {},
   setBlogData: () => {},

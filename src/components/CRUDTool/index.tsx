@@ -5,16 +5,16 @@ import Button from "./Button";
 import PostList from "./PostList";
 import ContentUpdater from "./ContentUpdater";
 import Title from "./Title";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext, setAuthStatusLocalStorage } from "../../context/authContext";
 import { AppContext } from "../../context/appContext";
 import { useNavigate } from "react-router-dom";
 
 const CRUDTool = () => {
   const { activeUserId, userData, renameUserName, setLogin, setActiveUserId } = useContext(AuthContext);
-  const { blogData, mainBanner, setMainBanner, deleteBlogData, isBlogExist } = useContext(AppContext);
+  const { blogData, mainBannerId, setMainBanner, deleteBlogData, isBlogExist } = useContext(AppContext);
   const [selectedUser] = userData.filter((i) => i.id === activeUserId);
   const [userName, setUserName] = useState(selectedUser.userName);
-  const [bannerId, setBannerId] = useState(mainBanner.toString());
+  const [bannerId, setBannerId] = useState(mainBannerId.toString());
   const navigate = useNavigate();
   const [edit, setEdit] = useState({
     status: false,
@@ -70,7 +70,9 @@ const CRUDTool = () => {
             onClick={() => {
               setLogin(false);
               setActiveUserId(0);
+              setAuthStatusLocalStorage("no", 0)
               navigate("/");
+              
             }}
           />
           {edit.status ? (
@@ -133,6 +135,7 @@ const CRUDTool = () => {
           onClick={() => {
             setLogin(false);
             setActiveUserId(0);
+            setAuthStatusLocalStorage("no", 0)
             navigate("/");
           }}
         />
