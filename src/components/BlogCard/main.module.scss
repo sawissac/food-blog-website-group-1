@@ -38,7 +38,8 @@
   &__card-list {
     margin: 30px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0px 10px;
     flex-wrap: wrap;
     gap: 1rem;
   }

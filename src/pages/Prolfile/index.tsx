@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import CRUDTool from "../../components/CRUDTool";
 import Navbar from "../../components/Navbar";
-import { AuthContext } from "../../context/authContext";
+import { AuthContext, getAuthStatusLocalStorage } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {
@@ -9,15 +9,16 @@ const ProfilePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLogin) {
+    const stoAuth = getAuthStatusLocalStorage();
+    if (stoAuth.isLogin === "no") {
       navigate("/user/sign-in");
     }
-  }, [isLogin]);
+  }, []);
 
   return (
     <>
       <Navbar />
-      <CRUDTool />
+      {isLogin && <CRUDTool />}
     </>
   );
 };
