@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { mockData } from "../../context/mock-data";
 import styles from "./mainvirtual.module.scss";
 import { useContext } from "react";
 import { AppContext } from "../../context/appContext";
@@ -7,8 +6,8 @@ import { AuthContext } from "../../context/authContext";
 
 const MainVirtual = () => {
   const { userData } = useContext(AuthContext);
-  const { mainBanner, blogData } = useContext(AppContext);
-  const [selectData] = blogData.filter((i) => i.id === mainBanner);
+  const { mainBannerId, blogData } = useContext(AppContext);
+  const [selectData] = blogData.filter((i) => i.id === mainBannerId);
   return (
     <section className={styles["p-main-virtual"]}>
       <div className={styles["p-main-virtual__inner"]}>

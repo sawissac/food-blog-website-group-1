@@ -5,12 +5,12 @@ import CardSubscribe from "./CardSubscribe";
 import { AppContext } from "../../context/appContext";
 
 const BlogCard = () => {
-  const mockData = useContext(AppContext);
-  
+  const { blogData } = useContext(AppContext);
+
   return (
     <section className={styles["p-blog"]}>
       <CardSubscribe />
-      <CardList data={mockData.blogData}/>
+      <CardList data={blogData} />
     </section>
   );
 };
