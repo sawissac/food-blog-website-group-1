@@ -22,7 +22,11 @@ const MainVirtual = () => {
               Tips & Tricks
             </span>
           </div>
-          <h1>{selectData.title.length > 30 ? selectData.title.substring(0, 30) + "..." : selectData.title}</h1>
+          <h1>
+            {selectData.title.length > 30
+              ? selectData.title.substring(0, 30) + "..."
+              : selectData.title}
+          </h1>
           <p>
             {selectData.desc.length > 200 ? selectData.desc.substring(0, 200) + "..." : selectData.desc}
             <Link to={`/detail/${selectData.id}`}>see more</Link>

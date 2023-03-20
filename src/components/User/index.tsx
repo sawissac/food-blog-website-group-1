@@ -22,7 +22,11 @@ const Login = () => {
         </div>
         <ul className={styles["p-login-form__slide-list"]}>
           <li>
-            <button type="button" title="button" className={styles["active"]}></button>
+            <button
+              type="button"
+              title="button"
+              className={styles["active"]}
+            ></button>
           </li>
           <li>
             <button type="button" title="button"></button>
