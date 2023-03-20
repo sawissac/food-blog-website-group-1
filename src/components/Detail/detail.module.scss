@@ -2,6 +2,21 @@
   font-family: 'Poppins', sans-serif;
   margin: 0 auto;
   max-width: 1300px;
+  &__nav{
+    padding: 20px 0px;
+    span{
+      font-weight: bold;
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: black;
+        margin: 0px 10px;
+      }
+    }
+  }
   &__image {
     height: 500px;
     position: relative;

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./detail.module.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AppContext } from "../../context/appContext";
 
 const Detail = () => {
@@ -17,6 +17,16 @@ const Detail = () => {
 
   return (
     <section className={styles["p-detail"]}>
+      <div className={styles["p-detail__nav"]}>
+        <Link to={"/"}>
+          Home
+        </Link>
+        <span>
+          {
+            selectedData.recipe
+          }
+        </span>
+      </div>
       <div className={styles["p-detail__image"]}>
         <div role="img" title="blur-img" style={{ backgroundImage: `url('${url}')` }} />
         <div role="img" title="img" style={{ backgroundImage: `url('${url}')` }} />
