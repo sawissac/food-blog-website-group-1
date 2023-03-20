@@ -43,16 +43,16 @@ const Navbar = () => {
         </nav>
 
         <nav>
-          <a href="#" title="instagram">
+          <a href="https://www.instagram.com/?hl=en" title="instagram">
             <i className="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" title="twitter">
+          <a href="https://twitter.com/" title="twitter">
             <i className="fa-brands fa-twitter"></i>
           </a>
-          <a href="#" title="facebook">
+          <a href="https://www.facebook.com/" title="facebook">
             <i className="fa-brands fa-facebook"></i>
           </a>
-          <a href="#" title="pinterest">
+          <a href="https://www.pinterest.com/" title="pinterest">
             <i className="fa-brands fa-pinterest"></i>
           </a>
           { 

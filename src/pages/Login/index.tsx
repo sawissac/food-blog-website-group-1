@@ -1,13 +1,13 @@
-
+import React from 'react'
 import Navbar from '../../components/Navbar'
 import Login from '../../components/User'
 
-const UserPage = () => {
+const UserPage: React.FC<{}> = () => {
   return (
-    <>
+    <React.Fragment>
         <Navbar />
         <Login />
-    </>
+    </React.Fragment>
   )
 }
 

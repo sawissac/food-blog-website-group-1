@@ -7,25 +7,20 @@ type Props = {
   mockdata: BlogData[];
   onEditClick: (ev: number) => void;
   onDeleteClick: (ev: number) => void;
-  onCreateClick: ()=>void;
+  onCreateClick: () => void;
 };
 
-const PostList: React.FC<Props> = ({ mockdata, onDeleteClick, onEditClick,onCreateClick }) => {
+const PostList: React.FC<Props> = ({ mockdata, onDeleteClick, onEditClick, onCreateClick }) => {
   return (
     <div className={styles["tool-container__post"]}>
       <Title text="Content" />
 
       <div>
         <p>Create Post</p>
-        <button
-          type="button"
-          title="edit"
-          onClick={onCreateClick}
-        >
+        <button type="button" title="edit" onClick={onCreateClick}>
           <i className="fa-regular fa-plus"></i>
         </button>
       </div>
-
       {mockdata.map((item, index) => {
         return (
           <div key={index}>

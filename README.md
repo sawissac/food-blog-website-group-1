@@ -12,6 +12,10 @@
  `2.0.0`
 - Note!: ✅The page can be interact, and also route are added.
 - Note!: ✅Context such as Authentication and App state are added.
+- Note!: ✅Login Page added!
+- Note!: ✅Can Register!
+- Note!: ✅CRUD Page added!
+- Note!: ✅Detail Page added!
 - Note!: ✨Code Readability improvement!.
  `1.0.0`
 - Note!: ⚠️This page contain only ui design, no interaction, routing & global state storing (redux).

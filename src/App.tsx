@@ -2,7 +2,7 @@ import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppContextProvider from "./context/appContext";
-import ProfilePage from "./pages/Prolfile";
+import ProfilePage from "./pages/Profile";
 import HomePage from "./pages/Home";
 import UserPage from "./pages/Login";
 import DetailPage from "./pages/Detail";

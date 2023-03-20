@@ -10,14 +10,14 @@ type Props = {
 const CardList: React.FC<Props> = ({ data }) => {
   return (
     <div className={styles["p-blog__card-list"]}>
-      {data.map((i, index) => {
+      {data.map((blog, index) => {
         return (
           <CardListItem
             key={index}
-            mins={i.mins}
-            title={i.title}
-            src={i.url}
-            id={i.id}
+            mins={blog.mins}
+            title={blog.title}
+            src={blog.url}
+            id={blog.id}
           />
         );
       })}

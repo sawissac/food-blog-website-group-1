@@ -5,10 +5,11 @@ import {
 } from "react";
 import { 
   BlogData, 
-  MockData, 
+  MockDataType, 
+  MockData
 } from "./mock-data";
 
-export const AppContext = createContext<MockData>(MockData);
+export const AppContext = createContext<MockDataType>(MockData);
 
 interface Props{
   children: ReactElement[] | ReactElement;
@@ -16,7 +17,7 @@ interface Props{
 
 const AppContextProvider: React.FC<Props> = ({ children }) => {
   const [mockData, setMockData] = useState(MockData);
-  const overRide: MockData = {
+  const overRide: MockDataType = {
     ...mockData,
     setMainBanner: (blogId: number)=>{
       setMockData((data)=>{

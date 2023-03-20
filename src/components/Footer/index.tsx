@@ -9,13 +9,7 @@ const Footer = () => {
           <NavLink to="/" title="easymeals">
             easymeals
           </NavLink>
-          <NavLink
-            to="/"
-            title="home"
-            className={({ isActive }) => {
-              return isActive ? styles["link--active"] : "";
-            }}
-          >
+          <NavLink to="/" title="home">
             home
           </NavLink>
           <NavLink to="/contact" title="contact">

@@ -7,7 +7,7 @@ export type BlogData = {
   id: number;
 };
 
-export type MockData = {
+export type MockDataType = {
   mainBannerId: number;
   blogData: BlogData[];
   uniqueId: number;
@@ -18,7 +18,7 @@ export type MockData = {
   isBlogExist: (id: number) => boolean;
 };
 
-export const MockData: MockData = {
+export const MockData: MockDataType = {
   mainBannerId: 5,
   uniqueId: 13,
   setMainBanner: () => { },
@@ -30,8 +30,8 @@ export const MockData: MockData = {
   createBlogData: () => { },
   blogData: [
     {
-      title: "Bauernbrot (German Farmer’s Bread)",
-      mins: "5:00",
+      title: "Bauernbrot (German Farmer's Bread)",
+      mins: "17:00",
       id: 1,
       recipe: "Bauernbrot",
       desc: `Bauernbrot has a long history in Germany, dating back to the Middle Ages. At that time, bread was a staple food for most Germans, and farmers were responsible for baking their own bread using the grains they grew themselves. The bread they made was hearty and filling, meant to sustain them through long days of hard work.
@@ -43,7 +43,7 @@ export const MockData: MockData = {
     },
     {
       title: "Sweet Potato with Avocado Toast and Soft-boiled Eggs",
-      mins: "5:00",
+      mins: "10:00",
       id: 2,
       recipe: "Sweet Potato",
       desc: `Sweet Potato with Avocado Toast and Soft-boiled Eggs is a Perfectly Balanced Meal.Are you looking for a healthy and delicious breakfast option that is both filling and nutritious? Look no further than Sweet Potato with Avocado Toast and Soft-boiled Eggs. This dish is a perfect combination of complex carbohydrates, healthy fats, and high-quality protein that will keep you feeling satisfied and energized throughout the day.
@@ -57,7 +57,7 @@ export const MockData: MockData = {
     },
     {
       title: "Avocado toast with Sweet Potato ",
-      mins: "5:00",
+      mins: "8:00",
       id: 3,
       recipe: "Avocado toast",
       desc: `Avocado toast has become a staple in many brunch menus and Instagram feeds. It's delicious, easy to make, and incredibly versatile. However, if you're looking to switch things up, try adding sweet potato to your avocado toast. Here's why it's worth trying:
@@ -70,7 +70,7 @@ export const MockData: MockData = {
     },
     {
       title: "Veggie Burger recipe",
-      mins: "5:00",
+      mins: "23:00",
       id: 4,
       recipe: "Veggie Burger",
       desc: `Veggie burgers are an excellent choice for those who are looking for a healthier and more sustainable alternative to traditional meat burgers. They are also incredibly versatile and can be made using a variety of ingredients, making them perfect for vegans, vegetarians, and flexitarians alike. In this article, we will explore a delicious and easy-to-make veggie burger recipe that is sure to satisfy your taste buds.
@@ -84,7 +84,7 @@ export const MockData: MockData = {
     },
     {
       title: "Green Papaya Slad",
-      mins: "5:00",
+      mins: "8:00",
       id: 5,
       recipe: "Green Papaya Slad",
       desc: `Cucumber salad is a refreshing and light dish made with thinly sliced cucumbers and a tangy dressing. It's a popular side dish in many countries and cultures, and it's often served alongside grilled meats or as a complement to spicy or rich dishes.
@@ -96,7 +96,7 @@ export const MockData: MockData = {
     },
     {
       title: "Strawberry-Banana Lactose Free Parfaits",
-      mins: "5:00",
+      mins: "45:00",
       id: 6,
       recipe: "Strawberry-Banana",
       desc: `If you're looking for a delicious and healthy treat, strawberry-banana lactose-free parfaits are an excellent choice. Not only are they rich in flavor, but they're also packed with nutrients that your body needs to function at its best.
@@ -113,7 +113,7 @@ export const MockData: MockData = {
     },
     {
       title: "Burger Restaurants in Bhavnagar",
-      mins: "5:00",
+      mins: "51:00",
       id: 7,
       recipe: "Burger",
       desc: `A hamburger, sometimes simply referred to as a burger, is a type of sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty is typically seasoned with various herbs and spices and may be cooked to different degrees of doneness, from rare to well-done, depending on the preference of the consumer.
@@ -127,7 +127,7 @@ export const MockData: MockData = {
     },
     {
       title: "PastaAL Limone With Shrimp",
-      mins: "5:00",
+      mins: "11:00",
       id: 8,
       recipe: "PastaAL Limone",
       desc: `Pasta is a beloved staple food in many parts of the world, particularly in Italy where it is a cultural icon. It is a versatile and comforting food that can be prepared in countless ways, making it a popular choice for both home-cooking and restaurant menus.
@@ -140,7 +140,7 @@ export const MockData: MockData = {
     },
     {
       title: "Sliced Bread with Cinnamon Butter",
-      mins: "5:00",
+      mins: "9:00",
       id: 9,
       recipe: "Bread and Butter",
       desc: `Sliced bread with cinnamon butter is a delicious and easy-to-make snack or breakfast option.Sliced bread with cinnamon butter is a delicious and easy-to-make snack or breakfast option. To make cinnamon butter, you can mix softened butter with ground cinnamon and a little bit of sugar to taste. Spread the cinnamon butter onto slices of your favorite bread, and then toast or bake the bread until it is golden brown and crispy. You can also add some sliced fruit or a drizzle of honey to make it even more flavorful. Enjoy!
@@ -149,7 +149,7 @@ export const MockData: MockData = {
     },
     {
       title: "Strawberry Cake",
-      mins: "5:00",
+      mins: "3:00",
       id: 10,
       recipe: "Strawberry Cake",
       desc: `Strawberry Cake Ingredients
@@ -190,7 +190,7 @@ export const MockData: MockData = {
     },
     {
       title: "Zesty Lime Shrimp and Avocado Salad",
-      mins: "5:00",
+      mins: "15:00",
       id: 12,
       recipe: "Shrimp and Avocado",
       desc: `Zesty Lime Shrimp and Avocado Salad is a refreshing and delicious dish that combines cooked shrimp, fresh avocado, crunchy vegetables, and a tangy lime dressing. Here's a basic recipe to give you an idea of how to make it:
