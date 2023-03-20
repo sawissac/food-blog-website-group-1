@@ -19,7 +19,7 @@ export type MockData = {
 };
 
 export const MockData: MockData = {
-  mainBannerId: 1,
+  mainBannerId: 5,
   uniqueId: 13,
   setMainBanner: () => { },
   setBlogData: () => { },
@@ -86,7 +86,7 @@ export const MockData: MockData = {
       title: "Green Papaya Slad",
       mins: "5:00",
       id: 5,
-      recipe: "Baked Sweet",
+      recipe: "Green Papaya Slad",
       desc: `Cucumber salad is a refreshing and light dish made with thinly sliced cucumbers and a tangy dressing. It's a popular side dish in many countries and cultures, and it's often served alongside grilled meats or as a complement to spicy or rich dishes.
       To make cucumber salad, start by selecting fresh and crisp cucumbers. Peel and slice them thinly using a mandoline or a sharp knife, and place them in a bowl. You can also use a spiralizer to create fun cucumber noodles.
       Next, prepare the dressing. A simple dressing can be made by mixing rice vinegar, sugar, salt, and pepper together in a small bowl. Some variations include adding soy sauce, sesame oil, or chopped herbs like cilantro or dill. The dressing should be sweet, sour, and slightly salty.
@@ -98,7 +98,7 @@ export const MockData: MockData = {
       title: "Strawberry-Banana Lactose Free Parfaits",
       mins: "5:00",
       id: 6,
-      recipe: "Baked Sweet",
+      recipe: "Strawberry-Banana",
       desc: `If you're looking for a delicious and healthy treat, strawberry-banana lactose-free parfaits are an excellent choice. Not only are they rich in flavor, but they're also packed with nutrients that your body needs to function at its best.
       One of the best things about strawberry-banana lactose-free parfaits is that they're incredibly versatile. You can switch up the fruit and granola to create different flavor combinations. For example, you could use blueberries and raspberries instead of strawberries and bananas, or swap out the granola for chopped nuts or seeds.
       In addition to being delicious, lactose-free parfaits are also a great way to get some important nutrients into your diet. Yogurt is an excellent source of protein and calcium, both of which are important for maintaining strong bones and muscles. Meanwhile, the fruit and granola provide a healthy dose of fiber, vitamins, and minerals.
@@ -115,7 +115,7 @@ export const MockData: MockData = {
       title: "Burger Restaurants in Bhavnagar",
       mins: "5:00",
       id: 7,
-      recipe: "Baked Sweet",
+      recipe: "Burger",
       desc: `A hamburger, sometimes simply referred to as a burger, is a type of sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty is typically seasoned with various herbs and spices and may be cooked to different degrees of doneness, from rare to well-done, depending on the preference of the consumer.
       Hamburgers have become a popular food item worldwide, with many fast food chains and restaurants offering their own versions of the classic sandwich. They can be served with a variety of toppings and condiments, such as lettuce, tomato, onion, pickles, cheese, ketchup, mustard, and mayonnaise.
       The origin of the hamburger is somewhat disputed, with several stories and claims to its invention. One of the most widely accepted theories is that the modern hamburger was invented in the United States in the late 19th or early 20th century. It is said to have originated in the city of Hamburg, Germany, where beef was commonly minced and formed into patties.
@@ -129,7 +129,7 @@ export const MockData: MockData = {
       title: "PastaAL Limone With Shrimp",
       mins: "5:00",
       id: 8,
-      recipe: "Baked Sweet",
+      recipe: "PastaAL Limone",
       desc: `Pasta is a beloved staple food in many parts of the world, particularly in Italy where it is a cultural icon. It is a versatile and comforting food that can be prepared in countless ways, making it a popular choice for both home-cooking and restaurant menus.
       Pasta is typically made from a dough consisting of wheat flour, water, and sometimes eggs. The dough is rolled out into thin sheets and then cut into various shapes, such as spaghetti, linguine, fettuccine, penne, and macaroni. Different shapes of pasta are often suited to different sauces or dishes, such as long and thin noodles being paired with light and delicate sauces, while chunkier shapes being paired with thicker and heartier sauces.
       Pasta dishes are typically served hot and can be prepared in a variety of ways. One of the most popular ways to serve pasta is with tomato sauce, which can be made with fresh or canned tomatoes, garlic, onions, and a variety of herbs and spices. Other popular pasta sauces include pesto, carbonara, Alfredo, and Bolognese.
@@ -194,15 +194,6 @@ export const MockData: MockData = {
       id: 12,
       recipe: "Shrimp and Avocado",
       desc: `Zesty Lime Shrimp and Avocado Salad is a refreshing and delicious dish that combines cooked shrimp, fresh avocado, crunchy vegetables, and a tangy lime dressing. Here's a basic recipe to give you an idea of how to make it:
-                •2 avocados, diced
-                •1 red onion, thinly sliced
-                •1 red bell pepper, diced
-                •1/4 cup chopped cilantro
-                •1/4 cup olive oil
-                •Juice of 2 limes
-                •2 garlic cloves, minced
-                •Salt and pepper to taste
-                Instructions:
                 In a large bowl, combine the cooked shrimp, diced avocado, sliced red onion, diced red bell pepper, and chopped cilantro.
                 In a small bowl, whisk together the olive oil, lime juice, minced garlic, salt, and pepper.
                 Pour the dressing over the shrimp and avocado mixture, and toss to coat everything evenly.
