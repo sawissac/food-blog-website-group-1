@@ -54,6 +54,46 @@
       font-weight: 400;
       margin: 0 5px;
     }
+    &__recipes-bloc{
+        display: flex;
+        justify-content: center;
+    }
+    div{
+        background-color: rgb(70, 69, 69);
+        color: aliceblue;
+        font-weight: bold;
+        padding: 5px 10px;
+        font-size: 25px;
+        font-weight: 400;
+        margin-right: 5px;
+    }
+    
+    h1{
+        text-align: center;
+        font-weight: 500;
+        font-size: 45px;
+        margin: 30px 0;
+    }
+    &__text{
+         max-width: 1060px;
+         margin:0px auto;
+    }
+    &__text-postdate{
+          text-align: center;
+          font-weight: 500;
+          font-size: 20px;
+          margin-bottom: 50px;
+          span{
+            color: rgb(71, 154, 231);
+         }
+    }
+    &__text-description{
+        font-size: 18px;
+        opacity: 0.8;
+        margin-bottom: 50px;
+    }
+}
+.Button{
   }
   &__recipes {
     margin-right: 5px;

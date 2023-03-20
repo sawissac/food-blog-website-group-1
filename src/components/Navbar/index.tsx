@@ -55,7 +55,8 @@ const Navbar = () => {
           <a href="#" title="pinterest">
             <i className="fa-brands fa-pinterest"></i>
           </a>
-          {isLogin ? (
+          { 
+             isLogin ? (
             <NavLink to="/profile" title="user">
               <i className="fa-regular fa-user"></i>Profile
             </NavLink>
