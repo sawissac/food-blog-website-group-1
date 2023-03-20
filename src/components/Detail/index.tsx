@@ -28,8 +28,16 @@ const Detail = () => {
         </span>
       </div>
       <div className={styles["p-detail__image"]}>
-        <div role="img" title="blur-img" style={{ backgroundImage: `url('${url}')` }} />
-        <div role="img" title="img" style={{ backgroundImage: `url('${url}')` }} />
+        <div
+          role="img"
+          title="blur-img"
+          style={{ backgroundImage: `url('${url}')` }}
+        />
+        <div
+          role="img"
+          title="img"
+          style={{ backgroundImage: `url('${url}')` }}
+        />
       </div>
       <div className={styles["p-detail__recipes-bloc"]}>
         <div>Recipes</div>

@@ -37,11 +37,11 @@ const AuthContextData: AuthProps = {
       password: "Mrbeast6000",
     },
   ],
-  setLogin: () => {},
-  setUserData: () => {},
-  setActiveUserId: () => {},
-  renameUserName: () => {},
-  createUserData: () => {},
+  setLogin: () => { },
+  setUserData: () => { },
+  setActiveUserId: () => { },
+  renameUserName: () => { },
+  createUserData: () => { },
 };
 
 interface AuthStatus {
