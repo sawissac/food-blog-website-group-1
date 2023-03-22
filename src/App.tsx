@@ -20,8 +20,7 @@ function App() {
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/user/:type" element={<UserPage />} />
               <Route path="/detail/:id" element={<DetailPage />} />
-              <Route path="/contact" element={<PageNotFound />} />
-              <Route path="/about" element={<PageNotFound />} />
+              <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </div>
         </AppContextProvider>

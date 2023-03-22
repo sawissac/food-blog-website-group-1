@@ -1,0 +1,14 @@
+.progress-scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    z-index: 9999;
+    &__bar{
+        height: inherit;
+        background-color: red;
+        transition: width;
+        transition-duration: 0.3s;
+    }
+}
