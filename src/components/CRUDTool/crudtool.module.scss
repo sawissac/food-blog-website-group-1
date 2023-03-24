@@ -5,8 +5,36 @@
   background-color: #ffffff;
   padding: 50px 20px;
   &__inner {
+    display: flex;
     max-width: 1300px;
     margin: 0 auto;
+  }
+  &__menu{
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid #808080;
+    nav{
+      padding-top: 20px;
+      height: 100%;
+      button{
+        width: 100%;
+        padding: 0px 10px;
+        background-color: white;
+        text-align: center;
+        font-size: 24px;
+        border: none;
+        outline-color: transparent;
+        margin-top: 20px;
+      }
+      .active{
+        font-weight: bold;
+      }
+    }
+  }
+  &__blog{
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 20px;
   }
   &__input {
     input {
@@ -41,7 +69,6 @@
     padding: 20px 0px;
   }
   &__post {
-    margin: 20px 0;
     > div {
       display: flex;
       justify-content: space-between;
